@@ -1,8 +1,13 @@
 from flask import Flask, request, jsonify
 
 # Initializing Flask
-flask = Flask(__name__)
+app = Flask(__name__)
 
+
+# Test endpoint
+@app.route("/")
+def home():
+    return "Home"
 
 # Running our Flask Application
 if __name__ == "__main__":
