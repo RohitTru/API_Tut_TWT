@@ -3,3 +3,26 @@ GET # Request data from a specified resource
 POST # Create a resource
 PUT # Update a resource
 DELETE # Delete a resource
+
+
+# we cant test the post route example through the web browser so we will use a third part application meant for testing apis: Postman
+Download and install Postman
+click the plus button in Postman to create a new request
+copy the local host link you are running the main.py file on into the url box in Postman
+before proceeding append '/create-user' to the url
+change the method to be POST
+select the Body tab
+select Raw to send raw data
+change the data from Text to json
+then in the body pass a javascript object notation object that looks like this:
+    {
+        "username": "your_name"
+    }
+then hit send
+
+Your response should be:
+    {
+        "username": "your_name"
+    }
+
+    with a status code of 201, showing that your POST Api request should be working
