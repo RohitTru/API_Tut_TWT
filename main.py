@@ -10,7 +10,12 @@ def get_user(user_id):
     user_data = {"user_id" : user_id,
                  "name": "Rohit Truesdale",
                  "email": "rohit.trues@gmail.com"}
-
+    # Query parameter
+    extra =request.args.get("extra")
+    if extra:
+        user_data["extra"] = extra
+    
+    return jsonify(user_data), 200 # jsonify: javascript object notation which is essentially a python dictionary in javascript. This allows a flask to parse our dictionary and return it in json to show the user. The 200 we pass is a status code that means success
 
 # Running our Flask Application
 if __name__ == "__main__":
