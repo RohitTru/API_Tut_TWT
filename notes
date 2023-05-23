@@ -1,0 +1,5 @@
+# These are different routes we can use to communicate over the internat using https protocol
+GET # Request data from a specified resource
+POST # Create a resource
+PUT # Update a resource
+DELETE # Delete a resource
